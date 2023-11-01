@@ -1,0 +1,330 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: montserrat;
+	background: linear-gradient(120deg, #2980b9, #8e44ad);
+	height:100vh;
+}
+
+.container
+{
+	position:relative;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	width:500px;
+	background:none;
+	border-radius: 10px;
+    border: 1px solid;
+    box-shadow:  2px 2px 2px 2px #000;
+}
+
+.container h1
+{
+	text-align:center;
+	padding:0 0 20px 0;
+	border-bottom: 2px solid silver;
+	font-weight:600;
+}
+
+.container form
+{
+	padding:0 40px;
+	box-sizing: border-box;
+}
+
+form .text1,
+form .text2,
+form .text3,
+form .text4
+{
+	position: relative;
+	border-bottom: 2px solid #000;
+	margin: 30px 0;
+	width: 200px;
+	display: inline-block;
+}
+form .text2
+{
+	margin-left: 15px;
+}
+form .text4
+{
+	margin-left: 15px;
+}
+
+
+.text1 input,
+.text2 input,
+.text3 input,
+.text4 input
+{
+	width:100%;
+	padding: 0 5px;
+	height: 40px;
+	font-size: 16px;
+	border:none;
+	background:none;
+	outline:none;
+}
+
+.text1 label,
+.text2 label,
+.text3 label,
+.text4 label
+{
+	position:absolute;
+	top:40%;
+	left: 5px;
+	color: #000;
+	transform: translatY(-50%);
+	font-size: 16px;
+	pointer-events: none;
+	transition: .5s;
+	
+}
+
+.text1 span::before,
+.text2 span::before,
+.text3 span::before,
+.text4 span::before{
+	content: '';
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 0%;
+	height: 2px;
+	background: #fff;
+	transition: .5s;
+}
+
+.text1 input:focus~ label,
+.text1 input:valid ~ label,
+.text2 input:focus~ label,
+.text2 input:valid ~ label,
+.text3 input:focus ~ label,
+.text3 input:valid ~ label,
+.text4 input:focus ~ label,
+.text4 input:valid ~ label{
+	top: -5px;
+	color: #fff;
+	
+}
+
+.text1 input:focus~ span::before,
+.text1 input:valid ~ span::before,
+.text2 input:focus~ span::before,
+.text2 input:valid ~ span::before,
+.text3 input:focus~ span::before,
+.text3 input:valid ~ span::before,
+.text4 input:focus~ span::before,
+.text4 input:valid ~ span::before{
+	
+	width:100%;
+}
+
+.btn button
+{
+	margin-left: 150px;
+	background: none;
+	border: 1px solid gray;
+	font-size: 35px;
+	margin-top: 30px;
+}
+button:hover,
+button:active {
+  letter-spacing: 3px;
+  border: none;
+}
+button:after,
+button:before {
+  backface-visibility: hidden;
+  border: 1px solid #fff;
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+button:hover:after,
+button:hover:before {
+  backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 350ms ease-in-out;
+  width: 100%;
+}
+
+button:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 100%;
+}
+
+.signup_link
+{
+	margin: 30px;
+	text-align: center;
+	font-size: 16px;
+	color: #000;
+}
+
+.signup_link a
+{
+	color: #fff;
+	text-decoration: none;
+}
+.signup_link a:hover
+{
+	text-decoration: underline;
+}
+/* .container .table 
+{
+	font-size: 20px;
+	display: inline;
+	margin-left: 10px;
+}
+.container .table select
+{
+	background: none;
+	color: #000;
+	border: 2px solid black;
+} */
+.container .count
+{
+	padding-top: 20px;
+	font-size: 17px;
+	padding-bottom: 30px;
+	display: inline-block;
+	/* margin-left: 70px; */
+	
+}
+.container .count input{
+	width: 40px;
+	background: none;
+	border: 1px solid black;
+	padding-left: 10px;
+	/* border: none; */
+	margin-left: 10px;
+}
+.container .date{
+	font-size: 20px;
+	display: inline;
+	margin-left: 50px;
+}
+.container .date input{
+	background: none;
+	/* border: 2px solid black; */
+	padding-left:5px;
+}
+.container .time
+{
+	font-size: 20px;
+	margin-top: 12px;
+}
+.container .time input{
+	margin-left: 10px;
+	background: none;
+	border-style: none;
+	border: 2px solid black;
+	padding-left: 5px;
+}
+.container .time .l1,
+.container .time .l2
+{
+	font-size: 15px;
+	margin-left: 5px;
+}
+.container .time .in1,
+.container .time .in2
+{
+	margin-left:0px;
+}
+
+
+/* Media query */
+
+@media (max-width: 500px)
+{
+	
+	.container
+	{
+		width: 90%;
+		height: 80%;
+		
+	}
+	.container form
+	{
+		width: 100%;
+		height: 100%;
+	}
+	
+	form .text1,
+	form .text2,
+	form .text3,
+	form .text4
+	{
+		position: relative;
+		border-bottom: 2px solid #000;
+		margin: 15px 0;
+		width: 150px;
+		margin-top: 0px;
+		display:inline-block;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	}
+	form .text2,
+	form .text4
+	{
+		margin-left: 40px;
+	}
+	.btn button
+	{
+		margin-left: 30%;
+		margin-top: 30px;
+		background: none;
+		border: 1px solid gray;
+		font-size: 30px;
+		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	}
+	/* .container .table 
+	{
+		font-size: 18px;
+		display: inline;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		/* margin-top: 10px; 
+	} */
+	.container .count
+	{
+		font-size: 17px;
+		margin-left: 0px;
+		padding-bottom: 10px;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	}
+	.container .date{
+		font-size: 18px;
+		padding-bottom: 15px;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		display: block;
+		margin-left: 0px;
+		margin-top: 15px;
+	} 
+	.container .date input
+	{
+		margin-left: 10px;
+	}
+	.container .time
+	{
+		font-size: 18px;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	
+	}
+	.container .signup_link
+	{
+		margin-left: 0%;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	}
+}
+
